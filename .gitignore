@@ -1,0 +1,55 @@
+### C++ ###
+# Prerequisites
+*.d
+
+# Object Files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic Libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran Module Files
+*.mod
+*.smod
+
+# Compiled Static Libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Build Directories
+/build/
+/bin/
+/obj/
+/Debug/
+/Release/
+
+# IDE Specific
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Architecture Specific Folders
+x64/
+x86/
