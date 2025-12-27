@@ -7,7 +7,7 @@ using namespace std;
 
 namespace Engine
 {
-	class StateMap
+	class StateManager
 	{
 	private:
 		stack<unique_ptr<State>> m_stateStack;
@@ -18,8 +18,8 @@ namespace Engine
 		bool m_remove;
 
 	public:
-		StateMap();
-		~StateMap();
+		StateManager();
+		~StateManager();
 
 		void add(unique_ptr<State> toAdd, bool replace = false);
 		void popCurrent();

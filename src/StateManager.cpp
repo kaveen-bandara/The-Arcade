@@ -1,27 +1,27 @@
 
-#include "../include/StateMap.hpp"
+#include "../include/StateManager.hpp"
 
-Engine::StateMap::StateMap() : m_add(false), m_replace(false), m_remove(false)
+Engine::StateManager::StateManager() : m_add(false), m_replace(false), m_remove(false)
 {
 }
 
-Engine::StateMap::~StateMap()
+Engine::StateManager::~StateManager()
 {
 }
 
-void Engine::StateMap::add(unique_ptr<State> toAdd, bool replace = false)
+void Engine::StateManager::add(unique_ptr<State> toAdd, bool replace = false)
 {
 	m_add = true;
 	m_newState = move(toAdd);
 	m_replace = replace;
 }
 
-void Engine::StateMap::popCurrent()
+void Engine::StateManager::popCurrent()
 {
 	m_remove = true;
 }
 
-void Engine::StateMap::processStateChange()
+void Engine::StateManager::processStateChange()
 {
 	if (m_remove && (!m_stateStack.empty()))
 	{
@@ -53,7 +53,7 @@ void Engine::StateMap::processStateChange()
 	}
 }
 
-unique_ptr<Engine::State>& Engine::StateMap::getCurrent()
+unique_ptr<Engine::State>& Engine::StateManager::getCurrent()
 {
 	return m_stateStack.top();
 }
