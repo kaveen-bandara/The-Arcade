@@ -1,7 +1,6 @@
 #pragma once
 
 #include <SFML/System/Time.hpp>
-using namespace sf;
 
 namespace Engine
 {
@@ -13,7 +12,7 @@ namespace Engine
 
 		virtual void init() = 0;
 		virtual void processInput() = 0;
-		virtual void update(Time deltaTime) = 0;
+		virtual void update(sf::Time deltaTime) = 0;
 		virtual void draw() = 0;
 
 		virtual void pause() {};

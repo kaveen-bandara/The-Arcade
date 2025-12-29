@@ -9,7 +9,7 @@ Engine::StateManager::~StateManager()
 {
 }
 
-void Engine::StateManager::add(unique_ptr<State> toAdd, bool replace = false)
+void Engine::StateManager::add(std::unique_ptr<State> toAdd, bool replace)
 {
 	m_add = true;
 	m_newState = move(toAdd);
@@ -49,11 +49,13 @@ void Engine::StateManager::processStateChange()
 		}
 
 		m_stateStack.push(move(m_newState));
+		m_stateStack.top()->init();
+		m_stateStack.top()->start();
 		m_add = false;
 	}
 }
 
-unique_ptr<Engine::State>& Engine::StateManager::getCurrent()
+std::unique_ptr<Engine::State>& Engine::StateManager::getCurrent()
 {
 	return m_stateStack.top();
 }

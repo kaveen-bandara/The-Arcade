@@ -19,13 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Main.hpp" />
+    <ClInclude Include="include\AssetManager.hpp" />
+    <ClInclude Include="include\Game.hpp" />
+    <ClInclude Include="include\MainMenu.hpp" />
     <ClInclude Include="include\State.hpp" />
-    <ClInclude Include="include\StateMap.hpp" />
+    <ClInclude Include="include\StateManager.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\StateMap.cpp" />
+    <ClCompile Include="src\AssetManager.cpp" />
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MainMenu.cpp" />
+    <ClCompile Include="src\StateManager.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
